@@ -41,12 +41,12 @@ public class Application {
     private static boolean fill(Filler filler) {
         long beginTime = System.currentTimeMillis();
 
-        for (long i = 0; i < totalCount; i++) {
-            if (!filler.insert("Tag" + i, "Tag" + i)) {
+        for (long i = 2; i < totalCount; i++) {
+            if (!filler.insert("Tag" + i, "Tag" + (i + 1))) {
                 return false;
             }
 
-            if (!filler.insert("Tag" + (i - 1), "Tag" + (i - 1))) {
+            if (!filler.insert("Tag" + (i - 1), "Tag" + (i - 2))) {
                 return false;
             }
 
